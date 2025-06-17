@@ -95,19 +95,19 @@ export function Hero() {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             <Button variant="ghost" size="icon" className="w-14 h-14 rounded-full cyber-border hover-lift glow-on-hover" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/fahmi-ramadhan" target="_blank" rel="noopener noreferrer">
                 <Github className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="w-14 h-14 rounded-full cyber-border hover-lift glow-on-hover" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/fahmirama/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="w-14 h-14 rounded-full cyber-border hover-lift glow-on-hover" asChild>
-              <a href="mailto:your.email@example.com">
+              <a href="mailto:fahmiramadn@gmail.com">
                 <Mail className="h-6 w-6" />
                 <span className="sr-only">Email</span>
               </a>
