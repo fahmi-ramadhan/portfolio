@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useState, useEffect, useMemo } from "react"
 
 export function Hero() {
-  const titles = useMemo(() => ["Software Engineer", "Full Stack Developer", "Problem Solver"], [])
+  const titles = useMemo(() => ["Software Engineer", "Full Stack Web Developer", "Problem Solver"], [])
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
   const [currentText, setCurrentText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)

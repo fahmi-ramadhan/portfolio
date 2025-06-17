@@ -44,7 +44,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {['about', 'projects', 'skills', 'experience', 'contact'].map((item) => (
+            {['about', 'projects', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -75,7 +75,7 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-2 border-t border-primary/20 ">
             <nav className="flex flex-col">
-              {['about', 'projects', 'skills', 'experience', 'contact'].map((item) => (
+              {['about', 'projects', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
