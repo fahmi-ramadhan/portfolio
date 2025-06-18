@@ -95,7 +95,7 @@ export function Projects() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-4">
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-8">
+          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
             <span className="text-primary font-mono text-sm">Featured Projects</span>
           </div>
         </div>

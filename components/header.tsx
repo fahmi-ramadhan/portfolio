@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -20,7 +19,11 @@ export function Header() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      const elementPosition = element.offsetTop - 80
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      })
     }
     setIsMenuOpen(false)
   }
@@ -41,7 +44,6 @@ export function Header() {
               fahmi-ramadhan.com
             </span>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {['about', 'projects', 'contact'].map((item) => (
@@ -56,7 +58,6 @@ export function Header() {
             ))}
             <ThemeToggle />
           </nav>
-
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
@@ -70,7 +71,6 @@ export function Header() {
             </Button>
           </div>
         </div>
-
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-2 border-t border-primary/20 ">
