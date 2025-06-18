@@ -42,7 +42,6 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center pt-18 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 retro-grid opacity-30" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
@@ -93,7 +92,7 @@ export function Hero() {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-8">
+          <div className="flex justify-center space-x-6">
             <Button variant="ghost" size="icon" className="w-14 h-14 rounded-full cyber-border hover-lift glow-on-hover" asChild>
               <a href="https://github.com/fahmi-ramadhan" target="_blank" rel="noopener noreferrer">
                 <Github className="h-6 w-6" />

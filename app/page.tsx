@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="gap-16 flex flex-col relative overflow-hidden">
+        <div className="absolute inset-0 retro-grid opacity-20" />
         <Hero />
         <About />
         <Projects />
