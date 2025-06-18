@@ -83,7 +83,7 @@ export function About() {
       `}</style>
 
       <section id="about" className="relative overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-chart-3/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/6 right-1/4 w-80 h-80 bg-chart-3/5 rounded-full blur-3xl animate-pulse" />
 
         <div className="container mx-auto sm:px-4 relative z-10">
           <div className="mx-auto text-center">
