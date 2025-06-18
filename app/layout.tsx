@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Audiowide } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -29,7 +29,11 @@ export const metadata: Metadata = {
   description: "Portfolio of a passionate software engineer specializing in web development",
   keywords: ["software engineer", "web developer", "portfolio", "react", "next.js"],
   authors: [{ name: "Fahmi Ramadhan" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
