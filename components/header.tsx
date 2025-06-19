@@ -3,10 +3,12 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X } from "lucide-react"
+import { useScrollTo } from "@/hooks/useScrollTo"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const scrollToSection = useScrollTo()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,15 +18,8 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const elementPosition = element.offsetTop - 80
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth"
-      })
-    }
+  const handleScrollToSection = (sectionId: string) => {
+    scrollToSection(sectionId)
     setIsMenuOpen(false)
   }
 
@@ -49,7 +44,7 @@ export function Header() {
             {['about', 'projects', 'contact'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item)}
+                onClick={() => handleScrollToSection(item)}
                 className="relative text-sm font-medium transition-colors hover:text-primary group hover:cursor-pointer"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -78,7 +73,7 @@ export function Header() {
               {['about', 'projects', 'contact'].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item)}
+                  onClick={() => handleScrollToSection(item)}
                   className="text-left px-4 py-3 text-sm font-medium hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}

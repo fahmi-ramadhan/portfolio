@@ -5,8 +5,10 @@ import { Github, Linkedin, Mail, Download } from "lucide-react"
 import Image from "next/image"
 import { useState, useEffect, useMemo } from "react"
 import { track } from '@vercel/analytics'
+import { useScrollTo } from "@/hooks/useScrollTo"
 
 export function Hero() {
+  const scrollToSection = useScrollTo()
   const titles = useMemo(() => ["Software Engineer", "Full Stack Web Developer", "Problem Solver"], [])
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
   const [currentText, setCurrentText] = useState("")
@@ -111,7 +113,12 @@ export function Hero() {
                 View Resume
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="cyber-border hover-lift text-lg px-8 py-6 hover:cursor-pointer">
+            <Button
+              variant="outline"
+              size="lg"
+              className="cyber-border hover-lift text-lg px-8 py-6 hover:cursor-pointer"
+              onClick={() => scrollToSection('projects')}
+            >
               View My Projects
             </Button>
           </div>
