@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 import Image from "next/image"
 import { useState, useEffect, useMemo } from "react"
-import { track } from '@vercel/analytics'
 import { useScrollTo } from "@/hooks/useScrollTo"
 
 export function Hero() {
@@ -14,27 +13,6 @@ export function Hero() {
   const [currentText, setCurrentText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
   const [typeSpeed, setTypeSpeed] = useState(100)
-
-  const trackResumeDownload = async () => {
-    try {
-      const response = await fetch('https://ipapi.co/json/')
-      const locationData = await response.json()
-
-      track('resume_download', {
-        country: locationData.country_name,
-        city: locationData.city,
-        region: locationData.region,
-        timezone: locationData.timezone,
-        user_agent: navigator.userAgent,
-        timestamp: new Date().toISOString()
-      })
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-      track('resume_download', {
-        timestamp: new Date().toISOString()
-      })
-    }
-  }
 
   useEffect(() => {
     const handleTyping = () => {
@@ -106,8 +84,7 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="cyber-border hover-lift neon-glow group text-lg px-8 py-6 hover:cursor-pointer"
-              onClick={trackResumeDownload} asChild>
+            <Button size="lg" className="cyber-border hover-lift neon-glow group text-lg px-8 py-6 hover:cursor-pointer" asChild>
               <a href="/resume.pdf" download="Fahmi_Ramadhan_Resume.pdf">
                 <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 View Resume
