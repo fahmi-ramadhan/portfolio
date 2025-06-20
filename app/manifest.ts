@@ -11,18 +11,8 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#bb9af7',
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-      {
-        src: '/icons/icon1.png',
-        sizes: '16x16',
-        type: 'image/png',
-      },
-      {
-        src: '/icons/icon2.png',
-        sizes: '32x32',
+        src: '/icons/icon4.png',
+        sizes: '512x512',
         type: 'image/png',
       },
       {
@@ -31,14 +21,24 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
       {
-        src: '/icons/icon4.png',
-        sizes: '512x512',
-        type: 'image/png',
-      },
-      {
         src: '/icons/apple-icon.png',
         sizes: '180x180',
         type: 'image/png',
+      },
+      {
+        src: '/icons/icon2.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        src: '/icons/icon1.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+      {
+        src: '/favicon.ico',
+        sizes: '48x48',
+        type: 'image/x-icon',
       }
     ],
   }
