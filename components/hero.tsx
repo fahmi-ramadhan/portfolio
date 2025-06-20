@@ -85,7 +85,7 @@ export function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button size="lg" className="cyber-border hover-lift neon-glow group text-lg px-8 py-6 hover:cursor-pointer" asChild>
-              <a href="/resume.pdf" download="Fahmi_Ramadhan_Resume.pdf">
+              <a href="/CV_FahmiRamadhan.pdf">
                 <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
                 View Resume
               </a>
