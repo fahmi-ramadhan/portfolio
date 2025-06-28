@@ -35,7 +35,7 @@ const projects = [
     description: "A comprehensive travel planning platform that helps users create, customize, and share itineraries with friends and family. Features tour booking, itinerary customization, and AI-powered suggestions.",
     images: ["/projects/mutari.png", "/projects/mutari-2.png", "/projects/mutari-3.png", "/projects/mutari-4.png"],
     url: "https://mutari.id",
-    github: null,
+    github: "https://github.com/Mutari-App",
     technologies: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Google Maps API", "Gemini AI", "MeiliSearch"]
   },
   {
