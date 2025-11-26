@@ -18,7 +18,7 @@ const projects = [
     title: "RELIC - Repository of Early Literary and Indigenous Codices",
     description: "A digital platform preserving Indonesia's cultural heritage, developed in collaboration with UI's Faculty of Cultural Sciences. The platform introduces younger generations to ancient manuscripts from East Java using modern web technologies.",
     images: ["/projects/relic.png", "/projects/relic-2.png", "/projects/relic-3.png", "/projects/relic-4.png", "/projects/relic-5.png"],
-    url: "https://relic.id",
+    url: "https://relic.up.railway.app",
     github: null,
     technologies: ["Next.js", "NextAuth", "TypeScript", "tRPC", "PostgreSQL", "Prisma", "Tailwind CSS"],
   },
